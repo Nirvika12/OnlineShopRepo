@@ -9,7 +9,7 @@ import { Retailer } from "../models/retailer.model";
 
 export class RetailerService{
 
-    url:string="http://localhost:35085/api/Retailer";
+    url:string="http://localhost:38181/api/Retailer";
     constructor(private client:HttpClient)
     {
     }

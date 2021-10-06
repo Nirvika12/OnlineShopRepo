@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 @Injectable(  {providedIn: 'root'})
 export class UserService{
-    url:string="http://localhost:35085/api/User";
+    url:string="http://localhost:38181/api/User";
     constructor(private client:HttpClient)
     {
 
@@ -25,12 +25,12 @@ export class UserService{
 
     UserDetails(usermail:string)
     {
-      return this.client.get("http://localhost:35085/api/User/GetUserDetails?umail="+usermail)
+      return this.client.get("http://localhost:38181/api/User/GetUserDetails?umail="+usermail)
     }
     
     GetUserOrders(usermail:string)
     {
-      return this.client.get("http://localhost:35085/api/User/GetUserOrders?umail="+usermail)
+      return this.client.get("http://localhost:38181/api/User/GetUserOrders?umail="+usermail)
     }
    
 }

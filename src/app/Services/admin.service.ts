@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
     })
 
 export class AdminService{
-  url:string="http://localhost:35085/api/Admins";
+  url:string="http://localhost:38181/api/Admins";
   constructor(private client:HttpClient,private registerHttp:HttpClient)
   {}
 

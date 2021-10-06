@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CartService {
-  url:string="http://localhost:35085/api/Cart/";
+  url:string="http://localhost:38181/api/Cart/";
   constructor(private http:HttpClient) { }
 
     RemoveProductCart(cartid : number) 
@@ -26,7 +26,7 @@ export class CartService {
 
     AddtoCart(val : any) {
         const httpheader={headers:new HttpHeaders({'Content-Type':'application/json'})};
-        return this.http.post("http://localhost:35085/api/Cart/InsertIntoCart",val ,httpheader);
+        return this.http.post("http://localhost:38181/api/Cart/InsertIntoCart",val ,httpheader);
     }
    
     GetTotal(useremail:any)
@@ -37,18 +37,18 @@ export class CartService {
     PurchaseAllProducts(useremail:any)
     {
         const httpheader={headers:new HttpHeaders({'Content-Type':'application/json'})};
-        return this.http.post("http://localhost:35085/api/Cart/PurchaseAllProducts?useremail="+useremail,httpheader);
+        return this.http.post("http://localhost:38181/api/Cart/PurchaseAllProducts?useremail="+useremail,httpheader);
     }
 
     QuantityIncr(usermail:any,pid:number)
     {
         const httpheader={headers:new HttpHeaders({'Content-Type':'application/json'})};
-        return this.http.post("http://localhost:35085/api/Cart/QuantityIncr?umail="+usermail+"&pid="+pid,httpheader);
+        return this.http.post("http://localhost:38181/api/Cart/QuantityIncr?umail="+usermail+"&pid="+pid,httpheader);
     }
 
     QuantityDecr(usermail:any,pid:number)
     {
         const httpheader={headers:new HttpHeaders({'Content-Type':'application/json'})};
-        return this.http.post("http://localhost:35085/api/Cart/QuantityDecr?umail="+usermail+"&pid="+pid,httpheader);
+        return this.http.post("http://localhost:38181/api/Cart/QuantityDecr?umail="+usermail+"&pid="+pid,httpheader);
     }
 }

@@ -7,7 +7,7 @@ import { Product } from "../models/product.model";
 })
 export class ProductsService {
 
-  url:string="http://localhost:35085/api/Retailer";
+  url:string="http://localhost:38181/api/Retailer";
 
   constructor(private http:HttpClient, private client:HttpClient, private registerHttp:HttpClient) { }
   
@@ -33,18 +33,18 @@ export class ProductsService {
 
   getAllProducts()
   {
-    return this.http.get('http://localhost:35085/api/Products/AllProducts');
+    return this.http.get('http://localhost:38181/api/Products/AllProducts');
   }
 
   searchallProducts(s:string)
   {
     const httpheader={headers:new HttpHeaders({'Content-Type':'text/html'})};
-    return this.http.get("http://localhost:35085/api/Products/SearchProduct?search="+s,httpheader);
+    return this.http.get("http://localhost:38181/api/Products/SearchProduct?search="+s,httpheader);
   }
 
   getallcategories()
   {
-    return this.http.get("http://localhost:35085/api/Products/GetCategory")
+    return this.http.get("http://localhost:38181/api/Products/GetCategory")
   }
 
 
